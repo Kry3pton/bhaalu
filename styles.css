@@ -1,508 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-html {
-    scroll-behavior: smooth;
-}
-
-html::-webkit-scrollbar {
-    width: 10px;
-  }
-   
-  html::-webkit-scrollbar-track {
-    background: black;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-   
-  html::-webkit-scrollbar-thumb {
-    background: red;
-    border: 3px solid rgb(142, 63, 43);
-  }
-
-* {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #111;
-    color: #f00;
-    font-family: 'Audiowide', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensures the navbar stays on top */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* Navbar */
+nav {
+  background: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff4f4f;
 }
 
-
-
-nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: bold;
 }
 
-nav a:hover {
-    color: #ff0000;
+.nav-links a:hover {
+  color: #ff4f4f;
 }
 
-.socials {
-    display: flex;
-    gap: 15px;
-    margin-right: 50px;
-
-}
-
-.socials a{
-    text-decoration: none;
-}
-
-.social-icon {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #ff0000;
-}
-
-.social-icon i {
-    display: block;
-}
-
-
-
-
-nav a.active {
-    color: #ff0000; /* Active link with bold red color */
-    border-bottom: 2px solid #ff0000; /* Underline effect for active link */
-}
-
-
+/* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    background: rgba(20, 20, 20, 0.9);
-    color:  #f00;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    margin-top: 100px;
+  margin-bottom: 3rem;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Hero Content */
+.hero-content {
+  background: #0a0a0a;
+  padding: 2rem;
+  max-width: 700px;
+  margin: -50px auto 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 79, 79, 0.3);
+  z-index: 1;
+  position: relative;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(255, 94, 94, 0.4);
+  color: #ff4f4f;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
+.hero .subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
 }
 
-.hero .btn {
-    background: #ff4500;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
-    transition: box-shadow 0.3s ease;
+.hero .buttons a {
+  background: #ff4f4f;
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 30px;
+  margin: 0.4rem;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 79, 79, 0.3);
+  transition: 0.3s;
 }
 
-.hero .btn:hover {
-    box-shadow: 0 20px 60px rgba(255, 69, 0, 0.6);
+.hero .buttons a:hover {
+  background: #e00000;
 }
 
-
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+.hero .quote {
+  font-style: italic;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
 }
 
-.glitch {
-    font-size: 32px;
-    text-transform: uppercase;
-    position: relative;
-    margin-top: 20px;
-    animation: glitch 1s infinite;
-}
-
-@keyframes glitch {
-    0% { text-shadow: -2px -2px #ff0000, 2px 2px #ff4500; }
-    50% { text-shadow: 2px -2px #ff0000, -2px 2px #ff4500; }
-    100% { text-shadow: -2px -2px #ff0000, 2px 2px #ff4500; }
-}
-
+/* Content Boxes */
 section {
-    width: 90%;
-    max-width: 1600px;
-    margin: 20px auto;
-    padding: 40px;
-    background: rgba(20, 20, 20, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    text-align: center;
-    color: white;
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
 }
 
-section h2 {
-    color: #ff4500;
+.box {
+  background: #1a1a1a;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 79, 79, 0.1);
 }
 
-.btn {
-    display: inline-block;
-    background: #ff0000;
-    color: #000;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
+.box h2 {
+  font-size: 1.6rem;
+  color: #ff4f4f;
+  margin-bottom: 1rem;
 }
 
-.btn:hover {
-    transform: scale(1.1);
+.box p {
+  font-size: 1.1rem;
 }
 
-.about {
-    background-color: #111;
-    color: #f00;
-    padding: 40px;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 1600px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-}
-
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #ff0000;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-.about strong {
-    font-size: 20px;
-    color: #ff4500;
-    display: block;
-    margin-top: 20px;
-}
-
-.about p:last-child {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ff0000;
-}
-
-.faq {
-    text-align: left;
-    max-width: 1600px;
-    margin: auto;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-}
-
-.faq-item {
-    background: rgba(255, 0, 0, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.faq-item:hover {
-    background: rgba(255, 0, 0, 0.3);
-}
-
-.faq-answer {
-    display: none;
-    padding-top: 10px;
-}
-
-/* --- Tokenomics Section --- */
-.tokenomics {
-    width: 90%;
-    max-width: 1600px;
-    margin: 40px auto;
-    padding: 40px;
-    background: rgba(20, 20, 20, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    text-align: center;
-}
-
-/* Title Styling */
-.tokenomics h2 {
-    font-size: 36px;
-    color: #ff0000;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-    margin-bottom: 25px;
-}
-
-/* Tokenomics Grid Layout */
-.tokenomics-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-    
-}
-
-/* Tokenomics Card */
-.token-item {
-    background: rgba(255, 0, 0, 0.1);
-    border-left: 5px solid #ff0000;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: left;
-    transition: transform 0.3s ease, background 0.3s ease;
-    font-size: 18px;
-}
-
-/* Highlighting Font Sizes */
-.token-item b {
-    font-size: 22px; /* Make the category name bigger */
-    color: #ff4500; /* Bright color for attention */
-}
-
-.token-item span {
-    font-size: 20px; /* Percentage slightly larger */
-    font-weight: bold;
-    color: #ffcc00; /* Golden yellow highlight */
-}
-
-.token-item:hover {
-    background: rgba(255, 0, 0, 0.3);
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .tokenomics-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
-    }
-
-    .token-item b {
-        font-size: 20px; /* Reduce size slightly for smaller screens */
-    }
-
-    .token-item span {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px) {
-    .tokenomics-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 per row on mobile */
-    }
-
-    .token-item {
-        text-align: center; /* Center align for mobile */
-    }
-}
-
-/* --- Roadmap Section --- */
-.roadmap {
-    width: 90%;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 40px;
-    background: rgba(20, 20, 20, 0.95);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-    text-align: center;
-}
-
-/* Title Styling */
-.roadmap h2 {
-    font-size: 36px;
-    color: #ff0000;
-    text-shadow: 0 0 10px #ff0000;
-    margin-bottom: 25px;
-}
-
-/* Roadmap Container */
-.roadmap-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Each Phase */
-.roadmap-phase {
-    background: rgba(255, 0, 0, 0.1);
-    border-left: 6px solid #ff0000;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: left;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-/* Roadmap Steps (Numbers) */
-.roadmap-step {
-    display: inline-block;
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    margin-right: 10px;
-}
-
-/* Roadmap Item Titles */
-.roadmap-item h4 {
-    font-size: 22px;
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-
-/* Roadmap Items */
-.roadmap-item p {
-    font-size: 18px;
-    color: #ddd;
-    margin: 5px 0;
-}
-
-/* Hover Effect */
-.roadmap-phase:hover {
-    background: rgba(255, 0, 0, 0.3);
-    transform: scale(1.02);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .roadmap h2 {
-        font-size: 32px;
-    }
-    
-    .roadmap-container {
-        gap: 20px;
-    }
-
-    .roadmap-item h4 {
-        font-size: 20px;
-    }
-
-    .roadmap-item p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 768px) {
-    .roadmap {
-        padding: 30px;
-    }
-
-    .roadmap h2 {
-        font-size: 28px;
-        
-    }
-
-    .roadmap-step {
-        font-size: 20px;
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-    }
-
-    .roadmap-item h4 {
-        font-size: 18px;
-    }
-
-    .roadmap-item p {
-        font-size: 15px;
-    }
-}
-
-
-
+/* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 16px;
-    border-top: 2px solid #ff0000;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+  background: #111;
+  text-align: center;
+  color: #aaa;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
 
-footer a {
-    color: #ff4500;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 
-footer a:hover {
-    color: #ff0000;
-}
+  .hero .subtitle {
+    font-size: 1rem;
+  }
 
+  .hero .buttons a {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
 
-
-/* Media query for mobile */
-@media screen and (max-width: 767px) {
-    html {
-        font-size: 12px; /* Smaller font size for mobile */
-    }
-
-    body {
-        font-size: 10px; /* Smaller font size for body on mobile */
-    }
+  .box p {
+    font-size: 1rem;
+  }
 }
